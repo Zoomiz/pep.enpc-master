@@ -1,0 +1,76 @@
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+<script>
+$(document).ready(function(){
+  $(".drop").click(function(){
+    $("nav").addClass("navbar-shrink");
+  });
+});
+var iWindowsSize = $(window).width();
+if (iWindowsSize  < 768){
+    $(document).ready(function(){
+    $("#bs-example-navbar-collapse-1").addClass("collapse");
+  });
+};
+</script>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="page-scroll" href="/" ><img src="{{ site.baseurl }}/img/logo-header.png" width="212" height="50" style="margin-top: 7px; margin-left: 10px; margin-bottom: 7px" alt="logo"/></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll drop" href="{{ site.baseurl }}/">Accueil</a>
+                </li>
+                <li class="drop">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Compétences</a>
+                    <div class="dropdown-menu">
+                        <div style="margin-left: 15px;">
+                            <a class="dropdown-item" href="{{ site.baseurl }}/competences/">Nos domaines</a>
+                        </div>   
+                        <div style="margin-left: 15px;">
+                            <a class="dropdown-item" href="{{ site.baseurl }}/mission/">Nos missions</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="drop">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">La Junior</a>
+                    <div class="dropdown-menu">
+                        <div style="margin-left: 15px;">
+                            <a class="dropdown-item" href="{{ site.baseurl }}/presentation/">Presentation</a>
+                        </div>   
+                        <div style="margin-left: 15px;">
+                            <a class="dropdown-item" href="{{ site.baseurl }}/equipe/">L'équipe</a>
+                        </div>
+                        <div style="margin-left: 15px;">
+                            <a class="dropdown-item" href="{{ site.baseurl }}/rapports/">Rapports</a>
+                        </div>  
+                    </div>
+                </li>
+                <!-- <li>
+                    <a class="page-scroll" href="{{ site.baseurl }}/references/">Références</a>
+                </li> -->
+                <li>
+                    <a class="page-scroll" href="{{ site.baseurl }}/actualites/">Actualités</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{{ site.baseurl }}/contact/">Contact</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="{{ site.baseurl }}/en/">EN/US</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
